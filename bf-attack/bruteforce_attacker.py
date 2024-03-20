@@ -21,12 +21,14 @@ class BruteForceAttacker:
         else:
             raise ValueError("Invalid type number")
 
-
-    def attack(self, hash_answer) -> float:
+    def attack(self, hash_answer):
         start = time.time()
         all_passwd = list(product(self.letter_set, repeat=self.length))
         for password in all_passwd:
             if self.hash_func("".join(password)) == hash_answer:
                 print("cracked password:", "".join(password))
-                return time.time() - start
-        return time.time() - start
+                print("cracking time:", time.time() - start)
+                return
+        print("Cracking Failed")
+        print("cracking time:", time.time() - start)
+        return

@@ -20,12 +20,7 @@ def main(hash_algo) -> None:
     print("password hash:", password_hash)
 
     attacker = BruteForceAttacker(_type, length, hash_algo)
-    result = attacker.attack(password_hash)
-
-    if result == -1:
-        print("Failed:", result)
-    else:
-        print("cracking time:", result)
+    attacker.attack(password_hash)
 
 
 if __name__ == "__main__":
