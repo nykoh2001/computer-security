@@ -1,6 +1,6 @@
 def ascii_hash(input: str) -> str:
-    result = ""
+    result = 0
     for c in input:
-        result += str(ord(c))
-    return result
+        result += ord(c)
+    return str(result)
 
