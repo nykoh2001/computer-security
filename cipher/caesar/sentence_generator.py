@@ -2,7 +2,7 @@ import random
 
 
 class SentenceGenerator:
-    with open("words.txt") as f:
+    with open("../words.txt") as f:
         words = [w.rstrip().lower() for w in f.readlines()]
 
     @classmethod
